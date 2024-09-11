@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Title of the webpage -->
     <title>Webpage</title>
+    <!-- Link to Bootstrap CSS for styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Custom style for footer text */
         .footer-text {
             font-size: 11pt;
         }
     </style>
 </head>
 <body>
+<!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Brand name -->
     <a class="navbar-brand" href="#">FlaskApp</a>
+    <!-- Button for toggling the navigation bar on small screens -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Collapsible part of the navigation bar -->
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+            <!-- Link to the index page -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('index') }}">Index</a>
             </li>
+            <!-- Link to the about page -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('about') }}">About</a>
             </li>
+            <!-- Link to the exam page -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('exam') }}">Exam</a>
             </li>
@@ -31,14 +42,18 @@
     </div>
 </nav>
 
+<!-- Main content container -->
 <div class="container">
+    <!-- Placeholder for content blocks defined in child templates -->
     {% block content %}{% endblock %}
 </div>
 
+<!-- Footer section -->
 <footer class="text-center mt-4">
     <p class="footer-text">Exam 1 | Copyright 2024</p>
 </footer>
 
+<!-- JavaScript dependencies for Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
