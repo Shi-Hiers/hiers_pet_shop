@@ -2,8 +2,104 @@
 
 {% block content %}
 
-<h1>Exam 1</h1>
-<img src="{{ url_for('static', filename='assets/me.jpg') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets for Adoption - Happy Tails Pet Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file if you have one -->
+</head>
+<body>
+    <header>
+        <h1>Pets for Adoption</h1>
+    </header>
+
+    <main>
+        <section id="search-filter">
+            <h2>Search and Filter Options</h2>
+            <form id="search-form">
+                <label for="species">Species:</label>
+                <select id="species" name="species">
+                    <option value="all">All</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="fish">Fish</option>
+                </select>
+
+                <label for="breed">Breed:</label>
+                <input type="text" id="breed" name="breed" placeholder="Enter breed">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter age (in years)">
+
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="available-pets">
+            <h2>Available Pets</h2>
+            <ul>
+                <li>
+                    <h3>Buddy</h3>
+                    <p>Breed: Labrador Retriever</p>
+                    <p>Age: 2 years</p>
+                    <p>Price: $150</p>
+                    <p>Description: A friendly and energetic dog who loves to play!</p>
+                </li>
+                <li>
+                    <h3>Whiskers</h3>
+                    <p>Breed: Domestic Shorthair</p>
+                    <p>Age: 1 year</p>
+                    <p>Price: $75</p>
+                    <p>Description: A sweet and affectionate cat who loves to cuddle.</p>
+                </li>
+                <li>
+                    <h3>Goldie</h3>
+                    <p>Breed: Goldfish</p>
+                    <p>Age: 6 months</p>
+                    <p>Price: $10</p>
+                    <p>Description: A bright and lively fish that adds color to any aquarium.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="adoption-process">
+            <h2>Adoption Process</h2>
+            <p>To adopt a pet, please follow these steps:</p>
+            <ol>
+                <li>Visit our shop and meet the pets available for adoption.</li>
+                <li>Fill out an adoption application form.</li>
+                <li>Our staff will review your application and may contact you for additional information.</li>
+                <li>Upon approval, you will be invited to complete the adoption.</li>
+            </ol>
+        </section>
+
+        <section id="inquiries">
+            <h2>Submit Adoption Applications or Inquiries</h2>
+            <form id="inquiry-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="pet-name">Pet Name:</label>
+                <input type="text" id="pet-name" name="pet-name" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Happy Tails Pet Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
 
 
 {% endblock %}

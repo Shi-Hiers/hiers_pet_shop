@@ -1,16 +1,78 @@
 {% extends "base.html" %}
 
 {% block content %}
-<style>
-    .center-text {
-        text-align: center;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Happy Tails Pet Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file if you have one -->
+</head>
+<body>
+    <header>
+        <h1>Happy Tails Pet Shop Services</h1>
+    </header>
 
-<h1 class="center-text">Who am I</h1>
-<p>I am currently a senior MMIS student at Georgia College & State University, working towards a career in project management. Outside of my academic pursuits, I have a strong connection to music, which has been a significant part of my life. I play several instruments, including the trumpet, baritone, and keyboard. Recently, I’ve also started learning the tenor saxophone, which has been an exciting new challenge for me. My love for music extends beyond playing; I’m particularly drawn to neo soul, a genre that resonates with me on a personal level and influences my appreciation for soulful, rich melodies.</p>
+    <main>
+        <section id="services-offered">
+            <h2>Description of Services Offered</h2>
+            <ul>
+                <li>
+                    <h3>Grooming</h3>
+                    <p>Happy Tails Pet Shop's grooming services include bathing, haircuts, nail trimming, and ear cleaning to keep your pets looking and feeling their best.</p>
+                </li>
+                <li>
+                    <h3>Training</h3>
+                    <p>We offer obedience training classes for dogs of all ages, focusing on basic commands, socialization, and behavioral issues.</p>
+                </li>
+                <li>
+                    <h3>Veterinary Services</h3>
+                    <p>Our in-house veterinary services include wellness check-ups, vaccinations, and preventative care to keep your pets healthy.</p>
+                </li>
+            </ul>
+        </section>
 
-<p> I am also a big sister to one younger brother. Being the eldest has given me a sense of responsibility and has shaped my approach to both leadership and family dynamics. My experiences as a sibling have taught me valuable lessons about support and understanding, which I carry into all areas of my life.</p>
+        <section id="pricing-scheduling">
+            <h2>Pricing and Scheduling Information</h2>
+            <p>For our services, please see the following pricing:</p>
+            <ul>
+                <li>Grooming: Starting at $30</li>
+                <li>Training: $200 for an 8-week course</li>
+                <li>Veterinary Check-up: $50</li>
+            </ul>
+            <p>To schedule an appointment, please call us at (555) 123-4567 or visit our website to book online.</p>
+        </section>
 
-<p> At home, I am a pet owner to a turtle named Aheo. Aheo adds a special touch to my daily routine, and she adds a soothing presence amid my busy schedule. Having a pet has given me a greater appreciation for the simple joys of life. Balancing my studies, music, family, and pet care keeps me grounded and motivated, and I cherish the harmony these elements bring to my life.</p>
+        <section id="testimonials">
+            <h2>Customer Testimonials</h2>
+            <blockquote>
+                <p>"Happy Tails Pet Shop provided excellent grooming services for my dog. He looks amazing and is so happy!" - Sarah M.</p>
+            </blockquote>
+            <blockquote>
+                <p>"The training classes helped my puppy learn so much. The trainers are fantastic!" - John D.</p>
+            </blockquote>
+        </section>
+
+        <section id="faqs">
+            <h2>FAQs Related to Services</h2>
+            <dl>
+                <dt>What are your grooming hours?</dt>
+                <dd>We are open for grooming from 9 AM to 5 PM, Monday to Saturday.</dd>
+
+                <dt>Do I need to make an appointment for training classes?</dt>
+                <dd>Yes, we recommend registering in advance to secure your spot in the training class.</dd>
+
+                <dt>What vaccinations do you require for pets visiting the vet?</dt>
+                <dd>We require up-to-date rabies and distemper vaccinations for all pets.</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Happy Tails Pet Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
 {% endblock %}
