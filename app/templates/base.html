@@ -15,55 +15,68 @@
     </style>
 </head>
 <body>
-<!-- Navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Brand name -->
-    <a class="navbar-brand" href="#">FlaskApp</a>
-    <!-- Button for toggling the navigation bar on small screens -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Collapsible part of the navigation bar -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <!-- Link to the index page -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-            </li>
-            <!-- Link to the Pets for Adoption page -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('about') }}">Pets for Adoption</a>
-            </li>
-            <!-- Link to the services page -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('exam') }}">Services</a>
-            </li>
-            <!-- Link to the contact page -->
-             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
-            </li>
-            <!-- Link to the about us page -->
-             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('informative') }}">About Us</a>
-            </li>
-        </ul>
+    <!-- Header block for child templates to override -->
+    <header>
+     {% block header %}
+<header class="header">
+      <div style="text-align: center;">
+    <h1 class="header-title">Happy Tails Pet Shop</h1>
+  <img src="{{ url_for('static', filename='assets/pet store.jpg') }}" width="150" style="display: inline-block;">          <div style="text-align: center;">
+</header>
+{% endblock %}
+
+    </header>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Brand name -->
+        <a class="navbar-brand" href="#"></a>
+        <!-- Button for toggling the navigation bar on small screens -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible part of the navigation bar -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Link to the index page -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <!-- Link to the Pets for Adoption page -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">Pets for Adoption</a>
+                </li>
+                <!-- Link to the services page -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('exam') }}">Services</a>
+                </li>
+                <!-- Link to the contact page -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                </li>
+                <!-- Link to the about us page -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('informative') }}">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Placeholder for content blocks defined in child templates -->
+        {% block content %}{% endblock %}
     </div>
-</nav>
 
-<!-- Main content container -->
-<div class="container">
-    <!-- Placeholder for content blocks defined in child templates -->
-    {% block content %}{% endblock %}
-</div>
+    <!-- Footer section -->
+    <footer class="text-center mt-4">
+        <p class="footer-text"> Copyright 2024</p>
+    </footer>
 
-<!-- Footer section -->
-<footer class="text-center mt-4">
-    <p class="footer-text"> Copyright 2024</p>
-</footer>
-
-<!-- JavaScript dependencies for Bootstrap -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript dependencies for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
