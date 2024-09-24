@@ -9,14 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets for Adoption - Happy Tails Pet Shop</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file if you have one -->
+    <style>
+        h2 {
+            margin-top: 40px; /* Space above h2 */
+            margin-bottom: 20px; /* Space below h2 */
+        }
+
+        h3 {
+            margin-top: 30px; /* Space above h3 */
+            margin-bottom: 10px; /* Space below h3 */
+        }
+
+        section {
+            padding: 20px 0; /* Top and bottom padding for sections */
+        }
+    </style>
 </head>
 <body>
     <header>
-          <div style="text-align: center;">
-        <h1>Pets for Adoption</h1>
-              <img src="{{ url_for('static', filename='assets/pet 1.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">
-
-          </div>
+        <div style="text-align: center;">
+            <h1>Pets for Adoption</h1>
+            <img src="{{ url_for('static', filename='assets/pet 1.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">
+        </div>
     </header>
 
     <main>
@@ -50,8 +64,7 @@
                     <p>Age: 2 years</p>
                     <p>Price: $150</p>
                     <p>Description: A friendly and energetic dog who loves to play!</p>
-                  <img src="{{ url_for('static', filename='assets/buddy.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
-
+                    <img src="{{ url_for('static', filename='assets/buddy.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
                 </li>
                 <li>
                     <h3>Whiskers</h3>
@@ -60,7 +73,6 @@
                     <p>Price: $75</p>
                     <p>Description: A sweet and affectionate cat who loves to cuddle.</p>
                     <img src="{{ url_for('static', filename='assets/whiskers.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
-
                 </li>
                 <li>
                     <h3>Goldie</h3>
@@ -68,8 +80,7 @@
                     <p>Age: 6 months</p>
                     <p>Price: $10</p>
                     <p>Description: A bright and lively fish that adds color to any aquarium.</p>
-                          <img src="{{ url_for('static', filename='assets/goldie.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
-
+                    <img src="{{ url_for('static', filename='assets/goldie.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
                 </li>
             </ul>
         </section>
@@ -110,6 +121,5 @@
     </footer>
 </body>
 </html>
-
 
 {% endblock %}
