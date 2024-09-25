@@ -5,26 +5,13 @@
     <title>Webpage</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f0f8ff; /* Light blue background */
-        }
-        .header-title {
-            color: #2c3e50; /* Dark blue color for the header title */
-        }
-        .footer-text {
-            font-size: 11pt;
-            color: #7f8c8d; /* Gray color for footer text */
-        }
-        .navbar {
-            background-color: #3498db; /* Blue background for navbar */
-        }
-        .navbar .nav-link {
-            color: white; /* White text for navbar links */
-        }
+
         footer {
             background-color: #2c3e50; /* Dark background for footer */
             color: white; /* White text for footer */
             padding: 10px 0; /* Padding for spacing */
+            text-align: center; /* Center text in footer */
+            position: relative; /* Make footer relative for better positioning */
         }
     </style>
 </head>
@@ -69,8 +56,8 @@
     {% block content %}{% endblock %}
 </div>
 
-<footer class="text-center mt-4">
-    <p class="footer-text">Copyright 2024</p>
+<footer>
+    <p class="footer-text">&copy; 2024 Happy Tails Pet Shop. All rights reserved.</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
