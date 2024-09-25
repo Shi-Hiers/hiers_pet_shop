@@ -1,52 +1,52 @@
-{% extends "base.html" %}
+{% extends "base.html" %}  <!-- Inherits the layout from base.html -->
 
-{% block content %}
+{% block content %}  <!-- Block for content specific to this page -->
     <header>
-        <div style="text-align: center;">
-            <h1>Contact Us</h1>
+        <div style="text-align: center;">  <!-- Centered header for the page title -->
+            <h1>Contact Us</h1>  <!-- Main heading for the contact page -->
         </div>
     </header>
 
     <main>
-        <section id="contact-info">
-            <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> (555) 123-4567</p>
-            <p><strong>Email:</strong> info@happytailspetshop.com</p>
-            <p><strong>Address:</strong> 123 Pet Lane, Pet City, PC 12345</p>
+        <section id="contact-info">  <!-- Section for displaying contact information -->
+            <h2>Contact Information</h2>  <!-- Subheading for contact details -->
+            <p><strong>Phone:</strong> (555) 123-4567</p>  <!-- Phone number -->
+            <p><strong>Email:</strong> info@happytailspetshop.com</p>  <!-- Email address -->
+            <p><strong>Address:</strong> 123 Pet Lane, Pet City, PC 12345</p>  <!-- Physical address -->
         </section>
 
-        <section id="contact-form" style="margin-top: 40px;">
-            <h2>Contact Form</h2>
-            <form action="submit_form.php" method="POST"> <!-- Update with your form handling script -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <section id="contact-form" style="margin-top: 40px;">  <!-- Section for the contact form -->
+            <h2>Contact Form</h2>  <!-- Subheading for the form -->
+            <form action="submit_form.php" method="POST"> <!-- Form handling script (update with actual script) -->
+                <label for="name">Name:</label>  <!-- Label for name input -->
+                <input type="text" id="name" name="name" required>  <!-- Input for name, required field -->
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>  <!-- Label for email input -->
+                <input type="email" id="email" name="email" required>  <!-- Input for email, required field -->
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Message:</label>  <!-- Label for message input -->
+                <textarea id="message" name="message" rows="4" required></textarea>  <!-- Textarea for user message -->
 
-                <button type="submit">Send Message</button>
+                <button type="submit">Send Message</button>  <!-- Submit button for the form -->
             </form>
         </section>
 
-        <section id="social-media">
-            <h2>Follow Us</h2>
-            <ul>
-                <li>Facebook: @HappyTailsPets</li>
-                <li>Instagram: @Happy_Tails_Pets</li>
-                <li>Twitter: @HappyTailsPS</li>
+        <section id="social-media">  <!-- Section for social media links -->
+            <h2>Follow Us</h2>  <!-- Subheading for social media -->
+            <ul>  <!-- Unordered list for social media accounts -->
+                <li>Facebook: @HappyTailsPets</li>  <!-- Facebook handle -->
+                <li>Instagram: @Happy_Tails_Pets</li>  <!-- Instagram handle -->
+                <li>Twitter: @HappyTailsPS</li>  <!-- Twitter handle -->
             </ul>
         </section>
 
-        <section id="map">
-            <h2>Map and Directions</h2>
-            <p>Find us at:</p>
-            <iframe
+        <section id="map">  <!-- Section for displaying the location on a map -->
+            <h2>Map and Directions</h2>  <!-- Subheading for map information -->
+            <p>Find us at:</p>  <!-- Instruction for finding the location -->
+            <iframe>  <!-- Embedded Google Maps iframe -->
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.100123488405!2d-122.084!3d37.42199999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbcdaaaa12345%3A0x123456789abcdef0!2sHappy%20Tails%20Pet%20Shop!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  <!-- Map display -->
         </section>
     </main>
 
-{% endblock %}
+{% endblock %}  <!-- End of content block -->

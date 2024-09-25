@@ -1,67 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>  <!-- Declares the document type and version -->
+<html lang="en">  <!-- Sets the language of the document to English -->
 <head>
-    <meta charset="UTF-8">
-    <title>Webpage</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">  <!-- Sets the character encoding for the document -->
+    <title>Webpage</title>  <!-- Title displayed in the browser tab -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  <!-- Link to Bootstrap CSS for styling -->
     <style>
-
+        /* Custom styles for the footer */
         footer {
-            background-color: #2c3e50; /* Dark background for footer */
-            color: white; /* White text for footer */
-            padding: 10px 0; /* Padding for spacing */
-            text-align: center; /* Center text in footer */
-            position: relative; /* Make footer relative for better positioning */
+            background-color: #2c3e50; /* Dark background color for the footer */
+            color: white; /* White text color for the footer */
+            padding: 10px 0; /* Vertical padding for spacing */
+            text-align: center; /* Center-aligns the text in the footer */
+            position: relative; /* Sets positioning context for child elements */
         }
     </style>
 </head>
 <body>
 
 <header>
-    {% block header %}
-    <div class="container d-flex justify-content-between align-items-center mt-3">
-        <div class="header d-flex align-items-center">
-            <img src="{{ url_for('static', filename='assets/pet store.jpg') }}" width="100" alt="Pet Store" class="mr-2">
-            <h4 class="header-title">Happy Tails Pet Shop</h4>
+    {% block header %}  <!-- Block for header content, allows overriding in child templates -->
+    <div class="container d-flex justify-content-between align-items-center mt-3">  <!-- Bootstrap container for layout -->
+        <div class="header d-flex align-items-center">  <!-- Flexbox container for header elements -->
+            <img src="{{ url_for('static', filename='assets/pet store.jpg') }}" width="100" alt="Pet Store" class="mr-2">  <!-- Logo image -->
+            <h4 class="header-title">Happy Tails Pet Shop</h4>  <!-- Title of the pet shop -->
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">  <!-- Bootstrap navigation bar -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>  <!-- Icon for the toggler button -->
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">  <!-- Collapsible part of the navbar -->
+                <ul class="navbar-nav">  <!-- Unordered list for navigation links -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>  <!-- Link to home page -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('about') }}">Pets for Adoption</a>
+                        <a class="nav-link" href="{{ url_for('about') }}">Pets for Adoption</a>  <!-- Link to pets for adoption page -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('exam') }}">Services</a>
+                        <a class="nav-link" href="{{ url_for('exam') }}">Services</a>  <!-- Link to services page -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>  <!-- Link to contact page -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('informative') }}">About Us</a>
+                        <a class="nav-link" href="{{ url_for('informative') }}">About Us</a>  <!-- Link to about us page -->
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
-    {% endblock %}
+    {% endblock %}  <!-- End of header block -->
 </header>
 
-<div class="container mt-4">
-    {% block content %}{% endblock %}
+<div class="container mt-4">  <!-- Main content container with margin-top -->
+    {% block content %}{% endblock %}  <!-- Block for main content, allows overriding in child templates -->
 </div>
 
 <footer>
-    <p class="footer-text">&copy; 2024 Happy Tails Pet Shop. All rights reserved.</p>
+    <p class="footer-text">&copy; 2024 Happy Tails Pet Shop. All rights reserved.</p>  <!-- Footer text with copyright notice -->
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Scripts for Bootstrap functionality -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  <!-- jQuery for Bootstrap components -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>  <!-- Popper.js for tooltip and popover positioning -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  <!-- Bootstrap JS for interactive components -->
 </body>
 </html>

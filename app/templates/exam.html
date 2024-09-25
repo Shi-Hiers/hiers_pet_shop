@@ -1,69 +1,69 @@
-{% extends "base.html" %}
+{% extends "base.html" %}  <!-- Inherit the layout and styles from base.html -->
 
-{% block content %}
+{% block content %}  <!-- Begin block for content specific to this page -->
     <header>
-        <div style="text-align: center;">
-            <h1>Happy Tails Pet Shop Services</h1>
-            <img src="{{ url_for('static', filename='assets/services') }}" width="200" style="display: inline-block; margin-right: 10px;">
+        <div style="text-align: center;">  <!-- Centered layout for the header -->
+            <h1>Happy Tails Pet Shop Services</h1>  <!-- Main title for the services page -->
+            <img src="{{ url_for('static', filename='assets/services') }}" width="200" style="display: inline-block; margin-right: 10px;">  <!-- Image related to services -->
         </div>
     </header>
 
     <main>
-        <section id="services-offered">
-            <h2>Description of Services Offered</h2>
-            <ul>
-                <li>
-                    <h3>Grooming</h3>
-                    <p>Happy Tails Pet Shop's grooming services include bathing, haircuts, nail trimming, and ear cleaning to keep your pets looking and feeling their best.</p>
-                    <img src="{{ url_for('static', filename='assets/groom.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
+        <section id="services-offered">  <!-- Section detailing the services offered -->
+            <h2>Description of Services Offered</h2>  <!-- Subheading for services -->
+            <ul>  <!-- Unordered list to display each service -->
+                <li>  <!-- List item for grooming service -->
+                    <h3>Grooming</h3>  <!-- Service title -->
+                    <p>Happy Tails Pet Shop's grooming services include bathing, haircuts, nail trimming, and ear cleaning to keep your pets looking and feeling their best.</p>  <!-- Description of the grooming service -->
+                    <img src="{{ url_for('static', filename='assets/groom.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image for grooming service -->
                 </li>
-                <li>
-                    <h3>Training</h3>
-                    <p>We offer obedience training classes for dogs of all ages, focusing on basic commands, socialization, and behavioral issues.</p>
-                    <img src="{{ url_for('static', filename='assets/train.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
+                <li>  <!-- List item for training service -->
+                    <h3>Training</h3>  <!-- Service title -->
+                    <p>We offer obedience training classes for dogs of all ages, focusing on basic commands, socialization, and behavioral issues.</p>  <!-- Description of the training service -->
+                    <img src="{{ url_for('static', filename='assets/train.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image for training service -->
                 </li>
-                <li>
-                    <h3>Veterinary Services</h3>
-                    <p>Our in-house veterinary services include wellness check-ups, vaccinations, and preventative care to keep your pets healthy.</p>
-                    <img src="{{ url_for('static', filename='assets/vet.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">
+                <li>  <!-- List item for veterinary services -->
+                    <h3>Veterinary Services</h3>  <!-- Service title -->
+                    <p>Our in-house veterinary services include wellness check-ups, vaccinations, and preventative care to keep your pets healthy.</p>  <!-- Description of veterinary services -->
+                    <img src="{{ url_for('static', filename='assets/vet.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image for veterinary services -->
                 </li>
             </ul>
         </section>
 
-        <section id="pricing-scheduling">
-            <h2>Pricing and Scheduling Information</h2>
-            <p>For our services, please see the following pricing:</p>
-            <ul>
-                <li>Grooming: Starting at $30</li>
-                <li>Training: $200 for an 8-week course</li>
-                <li>Veterinary Check-up: $50</li>
+        <section id="pricing-scheduling">  <!-- Section for pricing and scheduling information -->
+            <h2>Pricing and Scheduling Information</h2>  <!-- Subheading for pricing details -->
+            <p>For our services, please see the following pricing:</p>  <!-- Introductory text for pricing -->
+            <ul>  <!-- Unordered list for pricing -->
+                <li>Grooming: Starting at $30</li>  <!-- Price for grooming -->
+                <li>Training: $200 for an 8-week course</li>  <!-- Price for training -->
+                <li>Veterinary Check-up: $50</li>  <!-- Price for veterinary check-up -->
             </ul>
-            <p>To schedule an appointment, please call us at (555) 123-4567 or visit our website to book online.</p>
+            <p>To schedule an appointment, please call us at (555) 123-4567 or visit our website to book online.</p>  <!-- Contact information for scheduling -->
         </section>
 
-        <section id="testimonials">
-            <h2>Customer Testimonials</h2>
-            <blockquote>
-                <p>"Happy Tails Pet Shop provided excellent grooming services for my dog. He looks amazing and is so happy!" - Sarah M.</p>
+        <section id="testimonials">  <!-- Section for customer testimonials -->
+            <h2>Customer Testimonials</h2>  <!-- Subheading for testimonials -->
+            <blockquote>  <!-- Blockquote for a testimonial -->
+                <p>"Happy Tails Pet Shop provided excellent grooming services for my dog. He looks amazing and is so happy!" - Sarah M.</p>  <!-- Testimonial text -->
             </blockquote>
-            <blockquote>
-                <p>"The training classes helped my puppy learn so much. The trainers are fantastic!" - John D.</p>
+            <blockquote>  <!-- Blockquote for another testimonial -->
+                <p>"The training classes helped my puppy learn so much. The trainers are fantastic!" - John D.</p>  <!-- Testimonial text -->
             </blockquote>
         </section>
 
-        <section id="faqs">
-            <h2>FAQs Related to Services</h2>
-            <dl>
-                <dt>What are your grooming hours?</dt>
-                <dd>We are open for grooming from 9 AM to 5 PM, Monday to Saturday.</dd>
+        <section id="faqs">  <!-- Section for frequently asked questions -->
+            <h2>FAQs Related to Services</h2>  <!-- Subheading for FAQs -->
+            <dl>  <!-- Definition list for FAQs -->
+                <dt>What are your grooming hours?</dt>  <!-- Question -->
+                <dd>We are open for grooming from 9 AM to 5 PM, Monday to Saturday.</dd>  <!-- Answer -->
 
-                <dt>Do I need to make an appointment for training classes?</dt>
-                <dd>Yes, we recommend registering in advance to secure your spot in the training class.</dd>
+                <dt>Do I need to make an appointment for training classes?</dt>  <!-- Question -->
+                <dd>Yes, we recommend registering in advance to secure your spot in the training class.</dd>  <!-- Answer -->
 
-                <dt>What vaccinations do you require for pets visiting the vet?</dt>
-                <dd>We require up-to-date rabies and distemper vaccinations for all pets.</dd>
+                <dt>What vaccinations do you require for pets visiting the vet?</dt>  <!-- Question -->
+                <dd>We require up-to-date rabies and distemper vaccinations for all pets.</dd>  <!-- Answer -->
             </dl>
         </section>
     </main>
 
-{% endblock %}
+{% endblock %}  <!-- End of content block -->
