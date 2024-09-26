@@ -9,6 +9,17 @@
     </header>
 
     <main>
+        <style>
+            h2 {
+                margin-top: 20px;  /* Adjust the top margin as needed */
+                margin-bottom: 10px;  /* Adjust the bottom margin as needed */
+            }
+            h3 {
+                margin-top: 30px;  /* Adjust the top margin for h3 */
+                margin-bottom: 5px;  /* Adjust the bottom margin for h3 */
+            }
+        </style>
+
         <section id="services-offered">  <!-- Section detailing the services offered -->
             <h2>Description of Services Offered</h2>  <!-- Subheading for services -->
             <ul>  <!-- Unordered list to display each service -->
@@ -25,7 +36,7 @@
                 <li>  <!-- List item for veterinary services -->
                     <h3>Veterinary Services</h3>  <!-- Service title -->
                     <p>Our in-house veterinary services include wellness check-ups, vaccinations, and preventative care to keep your pets healthy.</p>  <!-- Description of veterinary services -->
-                    <img src="{{ url_for('static', filename='assets/vet.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image for veterinary services -->
+                    <img src="{{ url_for('static', filename='assets/vet') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image for veterinary services -->
                 </li>
             </ul>
         </section>
